@@ -1,5 +1,6 @@
 # SkyblockRat
-## code to the rat i give to people 
+## My rats code
+## join my discord! https://discord.gg/bbK6ndHqN6
 ### i got tired of people asking "is it double hooked?! so here is my rats code
 ### you can change the webhook in: 
 #### github.quantizr.autogg.guis
