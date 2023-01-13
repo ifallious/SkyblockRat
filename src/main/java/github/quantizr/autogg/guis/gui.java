@@ -3,7 +3,7 @@ package github.quantizr.autogg.guis;
 public class gui {
 	public static String guiHandler() {
 		// put the webhook here
-		return "replace this with webhook";
+		return "replace this with webhook"; // dont replace the "" btw eg: return "webhook";
 		// WEBHOOK GOES IN HERE ^^^^^^
 				}
 
