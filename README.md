@@ -2,6 +2,7 @@
 ## My rats code
 ### HERE IS A TUTORIAL ON HOW TO COMPILE: https://youtu.be/YGz_75Zl-ZA
 ### not made by me just some rando
+### !(https://i.imgur.com/kdJn3aA.png)[https://i.imgur.com/kdJn3aA.png]
 ### join my discord! https://discord.gg/bbK6ndHqN6
 ### or add me on discord i love rat#9200
 ### you can change the webhook in the file directory: 
