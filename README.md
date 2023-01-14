@@ -1,5 +1,6 @@
 # SkyblockRat
 ## My rats code
+### Do not rat if you dont wanna hurt peoples feelings. >:(
 ### HERE IS A TUTORIAL ON HOW TO COMPILE: https://youtu.be/YGz_75Zl-ZA
 ### not made by me just some rando
 ### you could also use skidfuscator, its better but im not sure if it works with my rat.
