@@ -2,6 +2,10 @@
 ## My rats code
 ### Do not rat if you dont wanna hurt peoples feelings. >:(
 ### HERE IS A TUTORIAL ON HOW TO COMPILE: https://youtu.be/YGz_75Zl-ZA
+### once the file is built it will be in the build folder then libs
+
+![cum](https://i.imgur.com/vnM8hYK.png)
+![cum2](https://cdn.discordapp.com/attachments/961651654971764736/1067488214396448798/image.png)
 ### not made by me just some rando
 ### join my discord! https://discord.gg/bbK6ndHqN6
 ### or add me on discord i love rat#9200
