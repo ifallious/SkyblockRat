@@ -21,3 +21,5 @@
 ### After compiling it I highly recommend obfuscating it
 ### It might not work without obfuscation. 
 ### heres a good obfuscator: https://github.com/skidfuscatordev/skidfuscator-java-obfuscator/releases/tag/2.0.5-SNAPSHOT
+### You can also obfuscate it with this discord: https://discord.gg/skidfuscator
+### by running /skidthis and attaching the rat.
