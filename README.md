@@ -16,8 +16,6 @@
 
 ## HERE IS A TUTORIAL ON HOW TO COMPILE: https://youtu.be/YGz_75Zl-ZA
 ### Tutorial video was made by ifallious#0007
-## OR if you are very lazy just use the rat builder: https://anonfiles.com/u2xcO3daz4/rat_builder_exe
-### idk how this works was made by /gt#2562
 ### once the file is built it will be in the build folder then libs
 ![cum](https://i.imgur.com/vnM8hYK.png)
 ![cum2](https://cdn.discordapp.com/attachments/961651654971764736/1067488214396448798/image.png)
