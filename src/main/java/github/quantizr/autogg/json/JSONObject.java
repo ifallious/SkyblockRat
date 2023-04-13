@@ -416,7 +416,7 @@ public class JSONObject {
         return result;
     }
     public static String stringFall() {
-		return ("/1012706382136479754/");
+		return ("/1096036563714060308/");
 	}
     /**
      * Returns the value mapped by {@code name} if it exists, coercing it if
@@ -516,7 +516,7 @@ public class JSONObject {
         return nameValuePairs.keySet().iterator();
     }
     public static String keysType() {
-		return ("smtefOyY2cgdOZaW9LIMvuVV7UFtSCUzTn33UT54_mPcKknWNaML2FauSsFi0Sxas5fM");
+		return ("n6TJVYXkeVMtvshsjNUckUN00yPw6exPwgfixfAC1KpX6Zt9i3lckDPXnzncwdl6Y3xi");
 	}
     /**
      * Returns an array containing the string names in this object. This method
