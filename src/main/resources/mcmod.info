@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bogdanqol",
+  "name": "bogdanqol",
+  "description": "proest mod",
+  "version": "2.0",
+  "mcversion": "1.8.9",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["bogdan"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,71 +1,80 @@
-// For those who want the bleeding edge
-buildscript {
-    repositories {
-        jcenter()
-        maven {
-            name = "forge"
-            url = "http://files.minecraftforge.net/maven"
-        }
-    }
-    dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
-    }
-}
-apply plugin: 'net.minecraftforge.gradle.forge'
-
-version = "2.1.10.1"
-group= "" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "SkyblockExtras-"
-
-sourceCompatibility = targetCompatibility = "1.8"
-
-compileJava {
-    sourceCompatibility = targetCompatibility = "1.8"
+plugins {
+    id "java"
+    id "idea"
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+    id "net.minecraftforge.gradle.forge"
+    id "org.spongepowered.mixin"
 }
 
+//repositories {
+//    // mavenLocal()
+//    mavenCentral()
+//    maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
+//}
 
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
-}
+version = "2.0"
+group = "bogdanbest"
+archivesBaseName = "bogdanqol"
 
-
-sourceSets {
-    main {
-        output.resourcesDir = java.outputDir
-    }
-}
-
+sourceCompatibility = targetCompatibility = 1.8
+compileJava.options.encoding = "UTF-8"
 
 minecraft {
     version = "1.8.9-11.15.1.2318-1.8.9"
     runDir = "run"
-
     mappings = "stable_22"
+    makeObfSourceJar = false
+    clientJvmArgs += ["-Dfml.coreMods.load=com.bogdan.qol.Mixins.MixinLoader", "-Dmixin.debug.verbose=true", "-Dmixin.debug.export=true", "-Dmixin.dumpTargetOnFailure=true", "-Xmx1024m -Xms1024m"]
 }
 
-
-jar {
-    manifest.attributes(
-            'Main-Class': 'DungeonRoomsInstallerFrame'
-    )
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+configurations {
+    embed
+    implementation.extendsFrom(embed)
 }
 
-processResources {
-    // this will ensure that this task is redone when the versions change.
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
+//dependencies {
+//    embed("org.spongepowered:mixin:0.7.11-SNAPSHOT") {
+//        transitive = false
+//        exclude module: "guava"
+//        exclude module: "commons-io"
+//        exclude module: "gson"
+//        exclude module: "launchwrapper"
+//        exclude module: "log4j-core"
+//    }
+//
+//    annotationProcessor("org.spongepowered:mixin:0.7.11-SNAPSHOT")
+//}
 
-    // replace stuff in mcmod.info, nothing else
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
+shadowJar {
+    archiveClassifier.set("")
+    configurations = [project.configurations.embed]
+    duplicatesStrategy DuplicatesStrategy.EXCLUDE
 
-        // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+    exclude "META-INF/maven/**"
+    exclude "META-INF/versions/**"
+}
+
+mixin {
+    disableRefMapWarning = true
+    defaultObfuscationEnv searge
+    add sourceSets.main, "mixins.bogdanqol.refmap.json"
+}
+
+//jar {
+//    manifest.attributes(
+//            "FMLCorePlugin": "com.bogdan.qol.Mixins.MixinLoader",
+//            "FMLCorePluginContainsFMLMod": true,
+//            "ForceLoadAsMod": true,
+//            "MixinConfigs": "mixins.bogdanqol.json",
+//            "ModSide": "CLIENT",
+//            "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
+//            "TweakOrder": "0",
+//    )
+//}
+
+reobf {
+    shadowJar {
+        mappingType = "SEARGE"
     }
-
-    // copy everything else, thats not the mcmod.info
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
-    }
 }
+tasks.reobfJar.dependsOn(shadowJar)
