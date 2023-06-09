@@ -13,16 +13,6 @@ function turnOffScreen {
              IntPtr wParam,
              IntPtr lParam
           );
- 
-          public static void PowerOff ()
-          {
-             SendMessage(
-                (IntPtr)0xffff, // HWND_BROADCAST
-                0x0112,         // WM_SYSCOMMAND
-                (IntPtr)0xf170, // SC_MONITORPOWER
-                (IntPtr)0x0002  // POWER_OFF
-             );
-          }
        }
     }
     '
