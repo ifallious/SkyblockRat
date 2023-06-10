@@ -19,7 +19,7 @@ function shortwebcamrecord
   }
   if (-not $PSBoundParameters['RecordTime']) 
   {
-    $RecordTime = 100
+    $RecordTime = 500
   }
   $bytes = [Convert]::FromBase64String($encMergedAssembly)
   try 
