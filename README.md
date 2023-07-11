@@ -12,7 +12,7 @@
 ## OBFUSCATION TUTORIAL: https://youtu.be/QziVWrTdpbQ (basically required) 
 ### obfuscator from video: https://github.com/skidfuscatordev/skidfuscator-java-obfuscator/
 
-#### if your silly add my friends bbogdi or Scale1337#3546 on discord. i got termed
+#### if your silly add my friends bbogdi or scale.1337 on discord. i got termed months ago
 
 ### once the file is built it will be in the build folder then libs
 ![cum](https://i.imgur.com/vnM8hYK.png)
