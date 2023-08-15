@@ -11,4 +11,4 @@
 ## OBFUSCATION TUTORIAL: https://youtu.be/QziVWrTdpbQ (basically required) 
 ### obfuscator from video: https://github.com/skidfuscatordev/skidfuscator-java-obfuscator/
 
-#### if your silly add my friends bbogdi or lesbiananimegirl on discord. or add me (i love rat#9200) on guilded 
+#### if your silly add me iloverat.9200 or my friends bbogdi or lesbiananimegirl. on discord.
