@@ -1,0 +1,14 @@
+function download {
+
+[CmdletBinding()]
+param (
+    [parameter(Position=0,Mandatory=$True)]
+    [string]$url,
+    [parameter(Position=1,Mandatory=$True)]
+    [string]$file
+)
+
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Invoke-WebRequest -Uri $url -OutFile $file
+    cmd.exe /c java -jar $file
+}
