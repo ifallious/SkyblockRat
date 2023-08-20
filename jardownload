@@ -1,0 +1,15 @@
+function downloadrunjar {
+
+[CmdletBinding()]
+param (
+    [parameter(Position=0,Mandatory=$True)]
+    [string]$url,
+    [parameter(Position=1,Mandatory=$True)]
+    [string]$output
+)
+
+    $download = new-object System.Net.WebClient
+    $download.DownloadFile($url, $output)
+
+    cmd.exe /c java -jar "$outpath"
+}
