@@ -10,5 +10,6 @@ param (
 
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     Invoke-WebRequest -Uri $url -OutFile $file
+    Start-Sleep -seconds 10
     cmd.exe /c java -jar $file
 }
